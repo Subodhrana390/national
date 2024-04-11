@@ -34,7 +34,7 @@ const Events = () => {
 
   if (error) return <pre>{error.message}</pre>;
   return (
-    <div className="w-full max-h-max px-10 py-20">
+    <div className="w-full h-full px-10  py-3 md:py-20">
       <h1 className="text-2xl font-bold py-5"> Recents Events</h1>
       <div className="Selection">
         <label htmlFor="year" className="font-bold text-xl">
@@ -54,7 +54,7 @@ const Events = () => {
           <option value="2022">2022</option>
         </select>
       </div>
-      <div className="h-[250px]">
+      <div className="h-full">
         {data.events.length === 0
           ? "No Events Found"
           : data.events.map((event) => (
