@@ -1,4 +1,5 @@
 import "./App.css";
+import Contact from "./components/Contact";
 import EventDetails from "./components/EventDetails";
 import Events from "./components/Events";
 import Footer from "./components/Footer";
@@ -9,13 +10,14 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="">
       <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/teams" element={<Teams />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
             path={`/eventdetails/:year/:slug`}
             element={<EventDetails />}

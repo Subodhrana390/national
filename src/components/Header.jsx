@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/logo.png";
 import MenuBar from "../assets/bar.svg";
 
 const Header = () => {
   const [isOpened, setIsOpened] = useState(false);
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  console.log(window.location.pathname);
   return (
-    <nav className="w-full bg-[rgb(82,30,133)] h-35 flex flex-col items-center">
+    <nav
+      className={`w-full bg-[rgb(82,30,133)] h-35 flex flex-col items-center ${
+        sticky ? "sticky top-0 z-[100]" : ""
+      }`}
+    >
       <div className="container relative mx-auto px-5 py-2 flex items-center justify-between gap-6">
         <div className="flex items-center">
           <img src={Logo} alt="logo" className="w-16 h-16" />
@@ -26,7 +41,7 @@ const Header = () => {
             </p>
           </div>
           <div
-            className="block md:hidden absolute top-8 right-8"
+            className="block md:hidden absolute top-8 right-8 z-10"
             onClick={() => setIsOpened(!isOpened)}
           >
             <img src={MenuBar} alt="" width={20} height={20} />
@@ -36,7 +51,9 @@ const Header = () => {
           <li className="nav-item">
             <a
               href="/"
-              className="nav-a active"
+              className={`nav-a ${
+                window.location.pathname === "/" ? "active" : ""
+              }`}
               onClick={() => {
                 setIsOpened(!setIsOpened);
               }}
@@ -47,7 +64,9 @@ const Header = () => {
           <li className="nav-item">
             <a
               href="/teams"
-              className="nav-a"
+              className={`nav-a ${
+                window.location.pathname === "/teams" ? "active" : ""
+              }`}
               onClick={() => {
                 setIsOpened(!setIsOpened);
               }}
@@ -58,7 +77,9 @@ const Header = () => {
           <li className="nav-item">
             <a
               href="/events"
-              className="nav-a"
+              className={`nav-a ${
+                window.location.pathname === "/events" ? "active" : ""
+              }`}
               onClick={() => {
                 setIsOpened(!setIsOpened);
               }}
@@ -69,7 +90,9 @@ const Header = () => {
           <li className="nav-item">
             <a
               href="/contact"
-              className="nav-a"
+              className={`nav-a ${
+                window.location.pathname === "/contact" ? "active" : ""
+              }`}
               onClick={() => {
                 setIsOpened(!setIsOpened);
               }}
@@ -80,7 +103,9 @@ const Header = () => {
           <li className="nav-item">
             <a
               href="/join"
-              className="nav-a"
+              className={`nav-a ${
+                window.location.pathname === "/join" ? "active" : ""
+              }`}
               onClick={() => {
                 setIsOpened(!setIsOpened);
               }}
