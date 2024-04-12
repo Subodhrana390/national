@@ -19,7 +19,7 @@ const Header = () => {
         sticky ? "sticky top-0 z-[100]" : ""
       }`}
     >
-      <div className="container relative mx-auto px-5 py-2 flex items-center justify-between gap-6">
+      <div className="container relative mx-auto px-3 md:px-5 py-2 flex items-center justify-between gap-6">
         <div className="flex items-center">
           <img src={Logo} alt="logo" className="w-16 h-16" />
 
