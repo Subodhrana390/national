@@ -73,7 +73,7 @@ const Events = () => {
                     textStyle="text-[8px] md:text-xl font-normal mb-2"
                   />
                   <a
-                    href={`/eventdetails/${event.year}/${event.slug}`}
+                    href={`/events/${event.year}/${event.slug}`}
                     className="bg-blue-600 p-1 rounded-sm text-[8px] md:text-xs font-bold"
                   >
                     Readmore

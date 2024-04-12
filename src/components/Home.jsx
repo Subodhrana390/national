@@ -5,7 +5,7 @@ import Banner from "./Banner";
 
 const Home = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       {/* Banner */}
       <Banner />
       {/* What we Do */}
@@ -78,11 +78,11 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 place-items-center gap-2">
           <div className="p-2 ">
             <img
-              src={ProgOfficer}
+              src="https://techscript-roshan.github.io/NSS-Website/Resources/Profile%20img/Rupinder%20kaur%20SRA.jpg"
               alt=""
               width={250}
               height={300}
-              className="border rounded-sm my-2"
+              className="border aspect-square rounded-sm my-2"
             />
             <div className="guest_info text-center">
               <h1>Rupinder Kaur SRA</h1>
@@ -92,11 +92,11 @@ const Home = () => {
           </div>
           <div className="p-2 ">
             <img
-              src={ProgOfficer}
+              src="https://techscript-roshan.github.io/NSS-Website/Resources/Profile%20img/Balwant%20Sing%20ASI2.jpg"
               alt=""
               width={250}
               height={300}
-              className="border rounded-sm my-2"
+              className="border aspect-square rounded-sm my-2"
             />
             <div className="guest_info text-center">
               <h1>Rupinder Kaur SRA</h1>
@@ -106,11 +106,11 @@ const Home = () => {
           </div>
           <div className="p-2 ">
             <img
-              src={ProgOfficer}
+              src="https://techscript-roshan.github.io/NSS-Website/Resources/Profile%20img/Dr.Gurpreet%20Kaur.jpg"
               alt=""
               width={250}
               height={300}
-              className="border rounded-sm my-2"
+              className="border aspect-square rounded-sm my-2"
             />
             <div className="guest_info text-center">
               <h1>Rupinder Kaur SRA</h1>
@@ -120,11 +120,11 @@ const Home = () => {
           </div>
           <div className="p-2 ">
             <img
-              src={ProgOfficer}
+              src="https://techscript-roshan.github.io/NSS-Website/Resources/Profile%20img/Dr._J_S_sandhu.jpg"
               alt=""
               width={250}
               height={300}
-              className="border rounded-sm my-2"
+              className="border aspect-square rounded-sm my-2"
             />
             <div className="guest_info text-center">
               <h1>Rupinder Kaur SRA</h1>

@@ -18,10 +18,7 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
-          <Route
-            path={`/eventdetails/:year/:slug`}
-            element={<EventDetails />}
-          />
+          <Route path={`/events/:year/:slug`} element={<EventDetails />} />
         </Routes>
       </BrowserRouter>
       <Footer />

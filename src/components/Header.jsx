@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <nav
       className={`w-full bg-[rgb(82,30,133)] h-35 flex flex-col items-center ${
-        sticky ? "sticky top-0 z-[100]" : ""
+        sticky ? "sticky top-0 z-10" : ""
       }`}
     >
       <div className="container relative mx-auto px-3 md:px-5 py-2 flex items-center justify-between gap-6">
