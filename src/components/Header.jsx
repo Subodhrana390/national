@@ -13,8 +13,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  console.log(window.location.pathname);
   return (
     <nav
       className={`w-full bg-[rgb(82,30,133)] h-35 flex flex-col items-center ${
@@ -128,27 +126,67 @@ const Header = () => {
           }  transition-all duration-300 ease-in-out flex space-x-4`}
         >
           <li className="nav-item">
-            <a href="/" className="nav-a active">
+            <a
+              href="/"
+              className={`nav-a ${
+                window.location.pathname === "/" ? "active" : ""
+              }`}
+              onClick={() => {
+                setIsOpened(!setIsOpened);
+              }}
+            >
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a href="/teams" className="nav-a">
+            <a
+              href="/teams"
+              className={`nav-a ${
+                window.location.pathname === "/teams" ? "active" : ""
+              }`}
+              onClick={() => {
+                setIsOpened(!setIsOpened);
+              }}
+            >
               Team
             </a>
           </li>
           <li className="nav-item">
-            <a href="/events" className="nav-a">
+            <a
+              href="/events"
+              className={`nav-a ${
+                window.location.pathname === "/events" ? "active" : ""
+              }`}
+              onClick={() => {
+                setIsOpened(!setIsOpened);
+              }}
+            >
               Event
             </a>
           </li>
           <li className="nav-item">
-            <a href="/contact" className="nav-a">
+            <a
+              href="/contact"
+              className={`nav-a ${
+                window.location.pathname === "/contact" ? "active" : ""
+              }`}
+              onClick={() => {
+                setIsOpened(!setIsOpened);
+              }}
+            >
               Contact
             </a>
           </li>
           <li className="nav-item">
-            <a href="/join" className="nav-a">
+            <a
+              href="/join"
+              className={`nav-a ${
+                window.location.pathname === "/join" ? "active" : ""
+              }`}
+              onClick={() => {
+                setIsOpened(!setIsOpened);
+              }}
+            >
               Join
             </a>
           </li>

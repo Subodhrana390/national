@@ -1,13 +1,16 @@
 import React from "react";
 import gop from "../assets/gop.svg";
 import ProgOfficer from "../assets/jasveer.jpg";
+import Banner from "./Banner";
 
 const Home = () => {
   return (
     <div className="bg-white">
+      {/* Banner */}
+      <Banner />
       {/* What we Do */}
-      <div className="bg-[#ededed] py-20 px-28 text-center">
-        <h1 className="my-10 font-serif ">
+      <div className="bg-[#ededed] py-2 md:py-20 px-10 md:px-28 text-center">
+        <h1 className="my-5 md:my-10 font-serif ">
           <span className="text-2xl font-bold">WHAT WE </span>
           DO?
         </h1>
@@ -22,7 +25,6 @@ const Home = () => {
           us and help us to make a difference.
         </p>
       </div>
-
       {/* Our reach */}
       <div className="py-20">
         <h1 className="text-center my-2 text-3xl font-bold">OUR REACH</h1>
@@ -67,7 +69,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       {/* OUR INSPIRING GUEST */}
       <div className="py-5 px-5 bg-[#ededed]">
         <h1 className="text-center font-bold text-2xl">OUR INSPIRING GUEST</h1>
@@ -133,9 +134,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-
-      
     </div>
   );
 };
