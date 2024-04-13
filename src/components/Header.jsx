@@ -15,14 +15,13 @@ const Header = () => {
   }, []);
   return (
     <nav
-      className={`w-full bg-[rgb(82,30,133)] h-35 flex flex-col items-center ${
+      className={`w-full bg-[rgb(82,30,133)] h-35 flex flex-col justify-center px-2 md:px-10 ${
         sticky ? "sticky top-0 z-10" : ""
       }`}
     >
-      <div className="container relative mx-auto px-3 md:px-5 py-2 flex items-center justify-between gap-6">
-        <div className="flex items-center">
+      <div className="relative px-3 md:px-5 py-2 flex justify-between items-center gap-6">
+        <div className="flex gap-1 justify-between items-center">
           <img src={Logo} alt="logo" className="w-16 h-16" />
-
           <div className="ml-2">
             <a href="/" className="text-xl md:text-2xl font-semibold">
               National Service Scheme
@@ -39,13 +38,13 @@ const Header = () => {
             </p>
           </div>
           <div
-            className="block md:hidden absolute top-8 right-8 z-10"
+            className="block md:hidden absolute top-6 right-6 z-10"
             onClick={() => setIsOpened(!isOpened)}
           >
             <img src={MenuBar} alt="" width={20} height={20} />
           </div>
         </div>
-        <ul className="hidden md:flex space-x-4">
+        <ul className="hidden md:flex space-x-8">
           <li className="nav-item">
             <a
               href="/"
@@ -123,7 +122,7 @@ const Header = () => {
         <ul
           className={`${
             isOpened ? "block" : "hidden"
-          }  transition-all duration-300 ease-in-out flex space-x-4`}
+          }  transition-all duration-300 ease-in-out flex justify-between px-10 space-x-4`}
         >
           <li className="nav-item">
             <a

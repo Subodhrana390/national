@@ -1,6 +1,6 @@
 import React from "react";
 import gop from "../assets/gop.svg";
-import ProgOfficer from "../assets/jasveer.jpg";
+import ProgOfficer from "../assets/Jasvir.jpg";
 import Banner from "./Banner";
 
 const Home = () => {

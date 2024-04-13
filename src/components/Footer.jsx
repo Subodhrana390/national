@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="col-span-2">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.989921948153!2d75.8593041756761!3d30.858957174523663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83c5bc6cc531%3A0xbe4a6fe42bac9483!2sNational%20Service%20Scheme!5e0!3m2!1sen!2sin!4v1699732694468!5m2!1sen!2sin"
-            width="300"
-            height="300"
             loading="lazy"
             title="nss"
+            height="300"
+            className="w-full"
           ></iframe>
         </div>
         {/* Contact info */}

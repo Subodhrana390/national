@@ -1,8 +1,7 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import Loader from "./Loader";
-import ProgOfficer from "../assets/jasveer.jpg";
-
+import ProgOfficer from "../assets/Jasvir.jpg";
 const Teams = () => {
   const query = gql`
     query MyQuery {
@@ -29,8 +28,10 @@ const Teams = () => {
   if (error) return <pre>{error.message}</pre>;
   return (
     <div className="w-full">
-      <div className="px-12 py-5">
-        <h1 className="">Our Team</h1>
+      <div className="w-full px-16 py-4">
+        <h1 className="font-semibold text-2xl ">
+          Our <span className="underline">Team</span>
+        </h1>
         <div className="grid  grid-cols-1 md:grid-cols-2 my-2 gap-5">
           <div className="col-span-1 text-justify">
             Meet the dedicated team driving positive change at Guru Nanak Dev
@@ -44,36 +45,43 @@ const Teams = () => {
             to create a more compassionate and socially responsible world. Join
             us on this transformative journey! Prof. Jasvir Singh Grewal
           </div>
-          <div className="col-span-1 flex flex-col justify-center items-center gap-5">
+          <div className="col-span-1 flex flex-col justify-center items-center gap-2">
             <img
               src={ProgOfficer}
               alt=""
-              width={200}
-              height={200}
-              className=""
+              className="h-[150px] w-[150px] bg-[#34A2DD] aspect-square rounded-full object-cover"
             />
             <div className="img-content text-center">
-              <h1>Prof. Jasvir Singh Grewal</h1>
-              <h3>Programme Officer</h3>
+              <h1 className="font-semibold">Prof. Jasvir Singh Grewal</h1>
+              <h3 className="font-semibold">Programme Officer</h3>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-wrap justify-center items-center gap-8">
+      <div className="w-full max-h-min px-10 md:px-20 flex flex-wrap justify-center items-center gap-8">
         {data.posts.map((Element) => (
           <div>
-            <h1 className="text-center mb-5">{Element.name}</h1>
-            <div className="flex justify-center flex-wrap gap-5">
+            <h1 className="text-center pt-10 font-bold text-2xl underline">
+              {Element.name}
+            </h1>
+            <div className="flex justify-center md:justify-start flex-wrap gap-5">
               {Element.member.map((item) => (
-                <div className="img h-40 w-40">
+                <div
+                  className="img h-[150px]  md:h-[180px] w-[140px] my-3
+                 md:my-6"
+                >
                   <img
                     src={item.image.url}
-                    className="rounded w-full "
+                    className="w-full bg-[#34A2DD] aspect-square rounded-full object-cover"
                     alt=""
                     loading="lazy"
                   />
-                  <p className="faculty_name">{item.name}</p>
-                  <p className="col-span-full">{item.branch}</p>
+                  <p className="faculty_name text-center py-1 text-sm font-semibold">
+                    {item.name}
+                  </p>
+                  <p className="col-span-full text-center pb-2 text-sm">
+                    {item.branch}
+                  </p>
                 </div>
               ))}
             </div>
