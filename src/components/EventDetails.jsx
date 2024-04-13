@@ -43,7 +43,16 @@ const EventDetails = () => {
           <ol class="breadcrumb my-2">
             {Links.map((path) => (
               <li class="breadcrumb-item">
-                <a href={`/${path}`} className="font-bold">
+                <a
+                  href={`/${
+                    path == year
+                      ? "events"
+                      : path == slug
+                      ? `events/${year}/${slug}`
+                      : ""
+                  }`}
+                  className="font-bold"
+                >
                   {path == "" ? "HOME" : path.toUpperCase()}
                 </a>
               </li>
