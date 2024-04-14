@@ -1,9 +1,9 @@
 import React from "react";
 import gop from "../assets/gop.svg";
-import ProgOfficer from "../assets/Jasvir.jpg";
 import Banner from "./Banner";
 
 const Home = () => {
+  document.title = "Home | National Service Scheme";
   return (
     <div className="bg-white ">
       {/* Banner */}

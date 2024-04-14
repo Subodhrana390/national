@@ -33,6 +33,8 @@ const Events = () => {
   if (loading) return <Loader />;
 
   if (error) return <pre>{error.message}</pre>;
+
+  document.title = "Events | National Service Scheme";
   return (
     <div className="w-full h-full px-10  py-3 md:py-20">
       <h1 className="text-2xl font-bold py-5"> Recents Events</h1>

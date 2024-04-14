@@ -3,6 +3,8 @@ import { useQuery, gql } from "@apollo/client";
 import Loader from "./Loader";
 import ProgOfficer from "../assets/Jasvir.jpg";
 const Teams = () => {
+
+  
   const query = gql`
     query MyQuery {
       posts(first: 15) {
@@ -26,6 +28,8 @@ const Teams = () => {
 
   if (loading) return <Loader />;
   if (error) return <pre>{error.message}</pre>;
+
+  document.title = "Team | National Service Scheme";
   return (
     <div className="w-full">
       <div className="w-full px-16 py-4">

@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import Loader from "./Loader";
 import LimitedParagraph from "./LimitedParagraph";
-import { useState } from "react";
 
 const EventDetails = () => {
   const { year, slug } = useParams();
@@ -34,6 +33,7 @@ const EventDetails = () => {
   if (error) return <pre>{error.message}</pre>;
 
   let Links = window.location.pathname.split("/");
+  document.title = `${slug.split("-").join(" ")} | Event`;
 
   return (
     <div className={``}>
