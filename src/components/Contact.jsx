@@ -5,13 +5,13 @@ const Contact = () => {
   return (
     <div>
       <div class="top_section">
-        <div class="container  flex flex-col justify-center items-center">
+        <div class="container flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold">Contact Us</h2>
           <p>Questions, complain, feedback --- we're here for it all.</p>
         </div>
       </div>
 
-      <div class="contact_form container">
+      <div class="contact_form">
         <form class="grid grid-cols-1 md:grid-cols-2 gap-4 rounded-lg p-4">
           <div class="form_banner bg-gray-200 p-4 rounded-lg flex justify-center items-center">
             <figure class="figure flex justify-center items-center">

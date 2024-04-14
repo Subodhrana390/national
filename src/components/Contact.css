@@ -11,7 +11,9 @@
   
     .container p {
       font-family: "Noto serif", serif;
-      width: 40%;
+      font-size: 14px;
+      text-align: center;
+      width: 100%;
     }
   }
   .b-name a {
@@ -33,7 +35,7 @@
     background-color: var(--secondary-white) !important;
   }
   .contact_form {
-    margin: -50px 0 50px;
+    width: 100%;
     .row {
       border: 1px solid rgb(var(--primary-color));
       background-color: white;
@@ -49,7 +51,7 @@
     color: rgb(var(--primary-color)) !important;
   }
   .form_data {
-    padding: 25px 45px !important;
+    padding: 25px 25px !important;
     .col-md {
       margin: 10px 0;
       .form-label {
