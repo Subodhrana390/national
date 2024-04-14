@@ -53,7 +53,11 @@ const EventDetails = () => {
                   }`}
                   className="font-bold"
                 >
-                  {path == "" ? "HOME" : path.toUpperCase()}
+                  {path == ""
+                    ? "HOME"
+                    : path == slug
+                    ? `${path.split("-").join(" ").toUpperCase()}`
+                    : path.toUpperCase()}
                 </a>
               </li>
             ))}
